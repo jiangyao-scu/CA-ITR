@@ -351,14 +351,3 @@ python test.py --model_path './models/CECNet/best_model.pth' --Expert
 
 ---
 
-<p align="center">
-  <a href="https://github.com/jiangyao-scu/CA-ITR/stargazers">
-    <img src="https://img.shields.io/github/stars/jiangyao-scu/CA-ITR?style=social" alt="Star">
-  </a>
-  &nbsp;&nbsp;
-  <b>Contact:</b> <a href="mailto:fkrsuper@scu.edu.cn">fkrsuper@scu.edu.cn</a>
-</p>
-
-<p align="center">
-  <sub>Supported by NSFC (No. 62176169) and Sichuan Science and Technology Program (2025ZNSFSC0469)</sub>
-</p>
