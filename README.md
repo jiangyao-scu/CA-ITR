@@ -86,6 +86,10 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
   <img src="images/Figure2.png" width="70%" alt="CamoIT Dataset">
 </p>
 
+<p align="center">
+  <img src="images/Figure5.png" width="80%" alt="Comparison with COCO and Flickr30K">
+</p>
+
 <table align="center">
 <tr>
 <td width="25%" align="center"><h2>10,464</h2><b>Total Samples</b></td>
@@ -351,3 +355,14 @@ python test.py --model_path './models/CECNet/best_model.pth' --Expert
 
 ---
 
+<p align="center">
+  <a href="https://github.com/jiangyao-scu/CA-ITR/stargazers">
+    <img src="https://img.shields.io/github/stars/jiangyao-scu/CA-ITR?style=social" alt="Star">
+  </a>
+  &nbsp;&nbsp;
+  <b>Contact:</b> <a href="mailto:fkrsuper@scu.edu.cn">fkrsuper@scu.edu.cn</a>
+</p>
+
+<p align="center">
+  <sub>Supported by NSFC (No. 62176169) and Sichuan Science and Technology Program (2025ZNSFSC0469)</sub>
+</p>
