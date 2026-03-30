@@ -42,7 +42,7 @@
 <hr>
 
 <p align="center">
-  <img src="images/Figure1.png" width="90%" alt="Motivation">
+  <img src="images/Figure1.png" width="65%" alt="Motivation">
 </p>
 
 ---
@@ -83,7 +83,7 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 ## 📊 CamoIT Dataset
 
 <p align="center">
-  <img src="images/Figure2.png" width="90%" alt="CamoIT Dataset">
+  <img src="images/Figure2.png" width="70%" alt="CamoIT Dataset">
 </p>
 
 <table align="center">
@@ -184,7 +184,7 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 ## 🏗️ Method
 
 <p align="center">
-  <img src="images/Figure3.png" width="95%" alt="CECNet Architecture">
+  <img src="images/Figure3.png" width="80%" alt="CECNet Architecture">
 </p>
 
 <table align="center">
@@ -274,7 +274,7 @@ Injected into <b>all 12 transformer layers</b>
 <h3 align="center">Qualitative Results</h3>
 
 <p align="center">
-  <img src="images/Figure4.png" width="95%" alt="Qualitative Results">
+  <img src="images/Figure4.png" width="80%" alt="Qualitative Results">
 </p>
 
 ---
