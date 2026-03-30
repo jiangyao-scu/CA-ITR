@@ -290,60 +290,40 @@ Injected into <b>all 12 transformer layers</b>
 
 ## 🔧 Getting Started
 
-### 📥 Downloads
+<table align="center">
+<tr>
+<td width="33%" align="center">
 
-#### Pre-trained Models
+### 📦 Pre-trained Models
 
-| Model | Description | Google Drive | Baidu Netdisk |
-|:------|:------------|:------------:|:-------------:|
-| CLIP ViT-B-32 | CLIP visual encoder | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
-| PVT-V2-B2 | Backbone for ZoomNeXt | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
-| ZoomNeXt | COD expert model | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
+CLIP ViT-B-32 • PVT-V2-B2 • ZoomNeXt
 
-#### Trained Weights
+<a href="#"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
+<a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
-| Model | Description | Google Drive | Baidu Netdisk |
-|:------|:------------|:------------:|:-------------:|
-| CECNet (Stage 1) | Trained C²GA weights | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
-| CECNet (Stage 2) | Full model weights | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
+</td>
+<td width="33%" align="center">
 
-#### CamoIT Dataset
+### 🎯 Trained Weights
 
-| Component | Description | Google Drive | Baidu Netdisk |
-|:----------|:------------|:------------:|:-------------:|
-| Images | Original images (~10.5K) | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
-| Annotations | Train/Test JSON files | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
-| COD Masks | Pre-computed ZoomNeXt masks | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
-| **Full Dataset** | All-in-one package | [Download](https://drive.google.com/file/d/XXXXXXXXXXXXXXXXX/view?usp=sharing) | [Download](https://pan.baidu.com/s/XXXXXXXXXX) (code: xxxx) |
+CECNet (Stage 1 & Stage 2)
 
-<details>
-<summary><b>📁 Dataset Structure</b></summary>
+<a href="#"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
+<a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
-```
-CamoIT/
-├── images/
-│   ├── train/
-│   └── test/
-├── masks_zoomnext/
-│   ├── train/
-│   └── test/
-├── train.json
-└── test.json
-```
+</td>
+<td width="33%" align="center">
 
-</details>
+### 📊 CamoIT Dataset
 
-<details>
-<summary><b>🗂️ Pretrained Weights Structure</b></summary>
+Images • Annotations • COD Masks
 
-```
-pretrained/
-├── ViT-B-32.pt          # CLIP visual encoder
-├── pvt_v2_b2.pth        # PVT-V2 backbone
-└── ZoomNeXt_retrain.pth # COD expert model
-```
+<a href="#"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
+<a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
-</details>
+</td>
+</tr>
+</table>
 
 ### Installation
 
