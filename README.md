@@ -55,57 +55,14 @@
 
 ## 📋 Table of Contents
 
-- [🚀 Highlights](#-highlights)
 - [📖 Abstract](#-abstract)
 - [💡 Motivation](#-motivation)
-- [🏗️ Method](#%EF%B8%8F-method)
 - [📊 CamoIT Dataset](#-camoit-dataset)
-- [📈 Results](#-results)
+- [📈 Benchmark](#-benchmark)
+- [🏗️ Method](#%EF%B8%8F-method)
+- [📉 Results](#-results)
 - [🔧 Getting Started](#-getting-started)
 - [📝 Citation](#-citation)
-
----
-
-## 🚀 Highlights
-
-<table>
-<tr>
-<td width="50%" align="center">
-
-### 🎯 First Work
-
-First work on image-text retrieval in camouflaged scenarios
-
-</td>
-<td width="50%" align="center">
-
-### 📊 CamoIT Dataset
-
-~10.5K samples · 237 categories
-
-Multi-granularity annotations
-
-</td>
-</tr>
-<tr>
-<td width="50%" align="center">
-
-### 🚀 Significant Boost
-
-**~29%** accuracy improvement
-
-vs. fine-tuned CLIP baseline
-
-</td>
-<td width="50%" align="center">
-
-### 🔧 Universal Design
-
-Plug-and-play for AVSE, D2S-VSE, etc.
-
-</td>
-</tr>
-</table>
 
 ---
 
@@ -126,6 +83,47 @@ Current SOTA retrieval models frequently **mismatch** textual descriptions with 
 | 🎭 | **Object Perception** | Camouflaged objects are visually similar to backgrounds |
 | 🌿 | **Complex Content** | Images contain intricate backgrounds and multiple elements |
 | 🔍 | **Fine-grained Understanding** | Requires detailed comprehension of object attributes |
+
+---
+
+## 📊 CamoIT Dataset
+
+<img src="images/Figure2.png" width="100%" alt="CamoIT Dataset">
+
+### Dataset Statistics
+
+| Statistics | Value |
+|:---:|:---:|
+| Total Samples | 10,464 |
+| Categories | 237 |
+| Training / Test | ~7,464 / 3,000 |
+| Avg. Caption Length | ~25 words |
+
+**Data Sources**: CHAMELEON · CAMO · COD10K · NC4K
+
+---
+
+## 📈 Benchmark
+
+### Table 1: Cross-Dataset Evaluation on CamoIT
+
+Quantitative results (R@K, %) of models trained on MS-COCO (left) and Flickr30K (right):
+
+| Method | Pub. | FG | BU | MS-COCO → CamoIT | Flickr30K → CamoIT |
+|:---|:---:|:---:|:---:|:---:|:---:|
+| | | | | I2T R@1 \| R@10 \| T2I R@1 \| R@10 | I2T R@1 \| R@10 \| T2I R@1 \| R@10 |
+| CFM | '22 | ✗ | ✓ | 10.7 \| 26.0 \| 10.7 \| 26.7 | 5.4 \| 16.5 \| 6.5 \| 18.9 |
+| HREM | '23 | ✗ | ✓ | 11.3 \| 28.1 \| 10.5 \| 27.1 | 6.7 \| 19.2 \| 5.7 \| 17.9 |
+| CHAN | '23 | ✓ | ✓ | 10.9 \| 29.7 \| 13.2 \| 30.1 | 6.9 \| 20.0 \| 7.8 \| 21.7 |
+| DBL | '24 | ✓ | ✓ | 7.1 \| 20.0 \| 8.7 \| 23.5 | 4.5 \| 14.2 \| 3.7 \| 13.6 |
+| CUSA | '24 | ✗ | ✗ | 15.1 \| 37.0 \| 13.5 \| 35.7 | 12.6 \| 34.0 \| 10.5 \| 27.6 |
+| LAPS | '24 | ✓ | ✗ | 11.8 \| 29.8 \| 10.6 \| 27.3 | 5.9 \| 17.2 \| 4.9 \| 15.7 |
+| AVSE | '25 | ✗ | ✗ | N/A \| N/A \| N/A \| N/A | 5.7 \| 16.0 \| 4.8 \| 14.8 |
+| D2S-VSE | '25 | ✗ | ✗ | 13.3 \| 33.1 \| 12.7 \| 30.9 | 7.5 \| 20.9 \| 6.5 \| 18.6 |
+
+- **FG**: Local alignment method
+- **BU**: Uses BUTD framework
+- All methods achieve **R@1 < 15%**, demonstrating CA-ITR is not merely a domain transfer task.
 
 ---
 
@@ -153,44 +151,9 @@ The C²GA mechanism is injected into **all 12 transformer layers**:
 
 ---
 
-## 📊 CamoIT Dataset
+## 📉 Results
 
-<img src="images/Figure2.png" width="100%" alt="CamoIT Dataset">
-
-### Dataset Statistics
-
-| Statistics | Value |
-|:---:|:---:|
-| Total Samples | 10,464 |
-| Categories | 237 |
-| Training / Test | ~7,464 / 3,000 |
-| Avg. Caption Length | ~25 words |
-
-**Data Sources**: CHAMELEON · CAMO · COD10K · NC4K
-
----
-
-## 📈 Results
-
-### Table 1: Cross-Dataset Results on CamoIT
-
-Models trained on MS-COCO and Flickr30K, evaluated on CamoIT:
-
-| Method | Pub. | MS-COCO → CamoIT | Flickr30K → CamoIT |
-|:---|:---:|:---:|:---:|
-| | | I2T R@1 \| T2I R@1 | I2T R@1 \| T2I R@1 |
-| CFM | '22 | 10.7 \| 10.7 | 5.4 \| 6.5 |
-| HREM | '23 | 11.3 \| 10.5 | 6.7 \| 5.7 |
-| CHAN | '23 | 10.9 \| 13.2 | 6.9 \| 7.8 |
-| DBL | '24 | 7.1 \| 8.7 | 4.5 \| 3.7 |
-| CUSA | '24 | 15.1 \| 13.5 | 12.6 \| 10.5 |
-| LAPS | '24 | 11.8 \| 10.6 | 5.9 \| 4.9 |
-| AVSE | '25 | N/A \| N/A | 5.7 \| 4.8 |
-| D2S-VSE | '25 | 13.3 \| 12.7 | 7.5 \| 6.5 |
-
-All methods achieve **R@1 < 15%**, revealing the unique challenges of CA-ITR.
-
-### Table 2: Main Results on CamoIT (Retrained)
+### Main Results on CamoIT
 
 | Method | I2T R@1 | I2T R@5 | I2T R@10 | T2I R@1 | T2I R@5 | T2I R@10 |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|
