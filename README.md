@@ -53,39 +53,37 @@
 
 ---
 
-## 📋 目录
+## 📋 Table of Contents
 
-- [🚀 亮点](#-highlights)
-- [📖 摘要](#-abstract)
-- [💡 动机](#-motivation)
-- [🏗️ 方法](#%EF%B8%8F-method)
-- [📊 CamoIT 数据集](#-camoit-dataset)
-- [📈 实验结果](#-results)
-- [🔧 快速开始](#-getting-started)
-- [📁 项目结构](#-project-structure)
-- [📝 引用](#-citation)
-- [🙏 致谢](#-acknowledgements)
+- [🚀 Highlights](#-highlights)
+- [📖 Abstract](#-abstract)
+- [💡 Motivation](#-motivation)
+- [🏗️ Method](#%EF%B8%8F-method)
+- [📊 CamoIT Dataset](#-camoit-dataset)
+- [📈 Results](#-results)
+- [🔧 Getting Started](#-getting-started)
+- [📁 Project Structure](#-project-structure)
+- [📝 Citation](#-citation)
+- [🙏 Acknowledgements](#-acknowledgements)
 
 ---
 
-## 🚀 亮点
+## 🚀 Highlights
 
 <table>
 <tr>
 <td width="50%" align="center">
 
-### 🎯 首创工作
+### 🎯 First Work
 
-首个伪装场景图文检索研究
-
-**First work** on image-text retrieval in camouflaged scenarios
+First work on image-text retrieval in camouflaged scenarios
 
 </td>
 <td width="50%" align="center">
 
-### 📊 CamoIT 数据集
+### 📊 CamoIT Dataset
 
-~10.5K 样本 · 237 类别
+~10.5K samples · 237 categories
 
 Multi-granularity annotations
 
@@ -94,20 +92,18 @@ Multi-granularity annotations
 <tr>
 <td width="50%" align="center">
 
-### 🚀 显著提升
+### 🚀 Significant Boost
 
-**~29%** 准确率提升
+**~29%** accuracy improvement
 
 vs. fine-tuned CLIP baseline
 
 </td>
 <td width="50%" align="center">
 
-### 🔧 通用设计
+### 🔧 Universal Design
 
-可集成到 AVSE、D2S-VSE 等
-
-Universal plug-and-play design
+Plug-and-play for AVSE, D2S-VSE, etc.
 
 </td>
 </tr>
@@ -115,80 +111,80 @@ Universal plug-and-play design
 
 ---
 
-## 📖 摘要
+## 📖 Abstract
 
-> 伪装场景理解 (CSU) 因其广泛的实际应用价值而备受关注。然而，该领域中鲁棒的**图文跨模态对齐**仍待探索。
+> Camouflaged scene understanding (CSU) has attracted significant attention due to its broad practical implications. However, in this field, robust **image-text cross-modal alignment** remains under-explored.
 > 
-> 我们提出了新任务 **CA-ITR** (伪装感知图文检索) 并构建 **CamoIT** 数据集 (~10.5K样本, 237类别)。通过设计具有 **C²GA** 机制的 **CECNet** 模型，实现了 **~29%** 的准确率提升。
+> We formulate a new task dubbed **CA-ITR** (Camouflage-aware Image-Text Retrieval) and construct **CamoIT** dataset (~10.5K samples, 237 categories). We propose **CECNet** with a novel **C²GA** mechanism, achieving **~29%** accuracy boost.
 
 ---
 
-## 💡 动机
+## 💡 Motivation
 
-现有 SOTA 检索模型在伪装场景中频繁出现**文本描述与视觉对象不匹配**的问题。CA-ITR 面临三大独特挑战：
+Current SOTA retrieval models frequently **mismatch** textual descriptions with incorrect visual objects in camouflaged scenes. CA-ITR presents three unique challenges:
 
-| | 挑战 | 描述 |
+| | Challenge | Description |
 |:---:|:---:|:---|
-| 🎭 | **目标感知** | 伪装目标与背景视觉相似，难以识别 |
-| 🌿 | **内容复杂** | 图像包含复杂背景和多种元素 |
-| 🔍 | **细粒度理解** | 需要对目标属性进行详细理解 |
+| 🎭 | **Object Perception** | Camouflaged objects are visually similar to backgrounds |
+| 🌿 | **Complex Content** | Images contain intricate backgrounds and multiple elements |
+| 🔍 | **Fine-grained Understanding** | Requires detailed comprehension of object attributes |
 
 ---
 
-## 🏗️ 方法
+## 🏗️ Method
 
-### 架构概览
+### Architecture Overview
 
 <img src="images/Figure3.png" width="100%" alt="CECNet Architecture">
 
-CECNet 采用**双分支视觉编码器**架构：
+CECNet features a **dual-branch visual encoder**:
 
-| 分支 | 模型 | 功能 |
+| Branch | Model | Function |
 |:---|:---|:---|
-| 🌐 **全局上下文分支** | CLIP ViT-B/32 | 捕获整体场景上下文 |
-| 🎯 **伪装专家分支** | ZoomNeXt (PVT-V2-B5) | 检测伪装目标 |
+| 🌐 **Global Context Branch** | CLIP ViT-B/32 | Capture holistic scene context |
+| 🎯 **Camouflage Expert Branch** | ZoomNeXt (PVT-V2-B5) | Detect camouflaged objects |
 
-### C²GA: 置信度条件图注意力
+### C²GA: Confidence-Conditioned Graph Attention
 
-C²GA 机制注入到**全部 12 个 Transformer 层**：
+The C²GA mechanism is injected into **all 12 transformer layers**:
 
-1. 利用 COD 掩码计算每个 patch 的伪装置信度
-2. 构建独立的前景图 (𝒢_F) 和背景图 (𝒢_B)
-3. 独立聚合特征以防止污染
-4. 自适应数据融合 (ADF) 实现稳定特征整合
+1. Leverage COD masks to compute camouflage confidence per patch
+2. Construct separate foreground (𝒢_F) and background (𝒢_B) graphs
+3. Aggregate features independently to prevent contamination
+4. Adaptive Data Fusion (ADF) for stable feature integration
 
 ---
 
-## 📊 CamoIT 数据集
+## 📊 CamoIT Dataset
 
 <img src="images/Figure2.png" width="100%" alt="CamoIT Dataset">
 
-### 数据集统计
+### Dataset Statistics
 
-| 统计项 | 数值 |
+| Statistics | Value |
 |:---:|:---:|
-| 总样本数 | 10,464 |
-| 类别数 | 237 |
-| 训练集 / 测试集 | ~7,464 / 3,000 |
-| 平均描述长度 | ~25 词 |
+| Total Samples | 10,464 |
+| Categories | 237 |
+| Training / Test | ~7,464 / 3,000 |
+| Avg. Caption Length | ~25 words |
 
-**数据来源**: CHAMELEON · CAMO · COD10K · NC4K
+**Data Sources**: CHAMELEON · CAMO · COD10K · NC4K
 
-### 多粒度标注
+### Multi-Granularity Annotations
 
-| 层级 | 类型 | 示例 |
+| Level | Type | Example |
 |:---:|:---|:---|
-| Level 1 | 类别 | *"A photo of crab."* |
-| Level 2 | 目标 | *"The crab has a shiny, brown shell."* |
-| Level 3 | 描述 | *"A crab with a mottled brown body is perched among smooth pebbles..."* |
+| Level 1 | Category | *"A photo of crab."* |
+| Level 2 | Object | *"The crab has a shiny, brown shell."* |
+| Level 3 | Caption | *"A crab with a mottled brown body is perched among smooth pebbles..."* |
 
 ---
 
-## 📈 实验结果
+## 📈 Results
 
-### 主要结果 (CamoIT 测试集)
+### Main Results on CamoIT
 
-| 方法 | I2T R@1 | I2T R@5 | I2T R@10 | T2I R@1 | T2I R@5 | T2I R@10 |
+| Method | I2T R@1 | I2T R@5 | I2T R@10 | T2I R@1 | T2I R@5 | T2I R@10 |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|
 | CFM | 30.8 | 59.9 | 70.3 | 28.9 | 57.2 | 68.3 |
 | HREM | 34.3 | 62.7 | 74.0 | 31.5 | 59.9 | 71.4 |
@@ -198,15 +194,15 @@ C²GA 机制注入到**全部 12 个 Transformer 层**：
 | AVSE | 28.1 | 59.7 | 72.2 | 26.1 | 56.3 | 69.7 |
 | CLIP (fine-tuned) | 41.3 | 69.2 | 79.0 | 41.1 | 67.7 | 78.4 |
 | **CECNet (Ours)** | **45.8** ✨ | **74.5** | **83.5** | **44.6** ✨ | **73.9** | **83.1** |
-| *提升* | *+4.5 ↑* | *+5.3 ↑* | *+4.5 ↑* | *+3.5 ↑* | *+6.2 ↑* | *+4.7 ↑* |
+| *Improvement* | *+4.5 ↑* | *+5.3 ↑* | *+4.5 ↑* | *+3.5 ↑* | *+6.2 ↑* | *+4.7 ↑* |
 
-### 定性结果
+### Qualitative Results
 
 <img src="images/Figure4.png" width="100%" alt="Qualitative Results">
 
-### COD 模型影响
+### Impact of COD Models
 
-| COD 模型 | I2T R@1 | T2I R@1 | S_α ↑ | MAE ↓ |
+| COD Model | I2T R@1 | T2I R@1 | S_α ↑ | MAE ↓ |
 |:---|:---:|:---:|:---:|:---:|
 | White (no detection) | 41.6 | 41.3 | 0.443 | 0.120 |
 | SINet | 42.3 | 42.1 | 0.808 | 0.049 |
@@ -216,9 +212,9 @@ C²GA 机制注入到**全部 12 个 Transformer 层**：
 
 ---
 
-## 🔧 快速开始
+## 🔧 Getting Started
 
-### 环境安装
+### Installation
 
 ```bash
 git clone https://github.com/jiangyao-scu/CA-ITR.git
@@ -231,75 +227,75 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install timm open-clip-torch opencv-python tqdm pandas
 ```
 
-### 数据集准备
+### Dataset Preparation
 
 ```
 data/
-├── images/              # 原始图像
-├── mask_zoomnext/       # 预计算的 COD 掩码
+├── images/              # Original images
+├── mask_zoomnext/       # Pre-computed COD masks
 ├── train.json
 └── test.json
 ```
 
-### 两阶段训练
+### Training (Two-Stage)
 
-**Stage 1**: 训练 C²GA (冻结 CLIP)
+**Stage 1**: Train C²GA (freeze CLIP)
 
 ```bash
 python train.py --output_dir './models/CCGA/' --frozen_clip --ccga_lr 1e-4
 ```
 
-**Stage 2**: 联合微调
+**Stage 2**: Joint fine-tuning
 
 ```bash
 python train.py --output_dir './models/CECNet/' --ccga_lr 1e-5 --clip_lr 1e-6 \
     --resume_path './models/CCGA/CCGAs.pth'
 ```
 
-### 评估
+### Evaluation
 
 ```bash
-# 使用预计算掩码 (更快)
+# Using pre-computed masks (faster)
 python test.py --model_path './models/CECNet/best_model.pth'
 
-# 在线 COD 推理
+# Using online COD inference
 python test.py --model_path './models/CECNet/best_model.pth' --Expert
 ```
 
 ---
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 CA-ITR/
-├── CECNet.py              # 主模型
-├── train.py               # 训练脚本
-├── test.py                # 评估脚本
-├── dataset.py             # 数据集类
-├── evaluation.py          # 评估指标
+├── CECNet.py              # Main model
+├── train.py               # Training script
+├── test.py                # Evaluation script
+├── dataset.py             # Dataset class
+├── evaluation.py          # Metrics
 ├── methods/
-│   ├── zoomnext/          # COD 专家模型
+│   ├── zoomnext/          # COD expert model
 │   └── backbone/          # PVT-V2, EfficientNet
-├── open_clip/             # 修改版 OpenCLIP
-└── images/                # README 资源
+├── open_clip/             # Modified OpenCLIP
+└── images/                # README assets
 ```
 
 ---
 
-## 💻 硬件需求
+## 💻 Hardware Requirements
 
-| 组件 | 最低要求 | 推荐配置 |
+| Component | Minimum | Recommended |
 |:---|:---|:---|
-| GPU | 16GB 显存 | 24GB (RTX 3090/4090) |
+| GPU | 16GB VRAM | 24GB (RTX 3090/4090) |
 | RAM | 32GB | 64GB |
 
-RTX 4090 训练时间: **Stage 1 ~2h** · **Stage 2 ~1h**
+Training time on RTX 4090: **Stage 1 ~2h** · **Stage 2 ~1h**
 
 ---
 
-## 📝 引用
+## 📝 Citation
 
-如果您发现本项目有帮助，请引用：
+If you find this work helpful, please cite:
 
 ```bibtex
 @inproceedings{jiang2026cecnet,
@@ -312,11 +308,11 @@ RTX 4090 训练时间: **Stage 1 ~2h** · **Stage 2 ~1h**
 
 ---
 
-## 🙏 致谢
+## 🙏 Acknowledgements
 
-本研究由 **国家自然科学基金** (No. 62176169) 和 **四川省科技计划** (2025ZNSFSC0469) 支持。
+This work is supported by **NSFC** (No. 62176169) and **Sichuan Science and Technology Program** (2025ZNSFSC0469).
 
-本项目基于以下开源工作构建：
+Built upon:
 
 [![CLIP](https://img.shields.io/badge/CLIP-OpenAI-lightgrey?style=flat-square)](https://github.com/openai/CLIP)
 [![OpenCLIP](https://img.shields.io/badge/OpenCLIP-MLFoundations-lightgrey?style=flat-square)](https://github.com/mlfoundations/open_clip)
@@ -327,10 +323,10 @@ RTX 4090 训练时间: **Stage 1 ~2h** · **Stage 2 ~1h**
 
 <div align="center">
 
-### 🌟 如果这个项目对您有帮助，请给一个 Star！
+### 🌟 If you find this project helpful, please give it a star!
 
 [![Star History Chart](https://api.star-history.com/svg?repos=jiangyao-scu/CA-ITR&type=Date)](https://star-history.com/#jiangyao-scu/CA-ITR&Date)
 
-**联系我们**: [fkrsuper@scu.edu.cn](mailto:fkrsuper@scu.edu.cn)
+**Contact**: [fkrsuper@scu.edu.cn](mailto:fkrsuper@scu.edu.cn)
 
 </div>
