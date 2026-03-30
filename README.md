@@ -47,7 +47,7 @@
 
 <sup>1</sup>College of Computer Science, Sichuan University &nbsp;&nbsp; <sup>2</sup>National Key Lab of Fundamental Science on Synthetic Vision
 
-<img src="images/Figure3.png" width="92%" alt="CECNet Architecture">
+<img src="images/Figure1.png" width="100%" alt="Motivation">
 
 </div>
 
@@ -124,8 +124,6 @@ Universal plug-and-play design
 ---
 
 ## 💡 动机
-
-<img src="images/Figure1.png" width="100%" alt="Motivation">
 
 现有 SOTA 检索模型在伪装场景中频繁出现**文本描述与视觉对象不匹配**的问题。CA-ITR 面临三大独特挑战：
 
@@ -205,19 +203,6 @@ C²GA 机制注入到**全部 12 个 Transformer 层**：
 ### 定性结果
 
 <img src="images/Figure4.png" width="100%" alt="Qualitative Results">
-
-### 消融实验
-
-| 设置 | I2T R@1 | T2I R@1 |
-|:---|:---:|:---:|
-| Baseline (CLIP) | 41.3 | 41.1 |
-| + Mask modulation | 28.5 ↓ | 30.0 ↓ |
-| + Conv fusion | 42.1 | 41.2 |
-| + Trainable prompt | 41.8 | 42.2 |
-| + Simple addition | 42.5 | 42.9 |
-| + Linear fusion | 42.4 | 41.7 |
-| + Vanilla GAT | 42.9 | 42.3 |
-| **+ C²GA (Ours)** | **45.8** ✨ | **44.6** ✨ |
 
 ### COD 模型影响
 
