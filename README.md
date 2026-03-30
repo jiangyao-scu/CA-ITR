@@ -62,9 +62,7 @@
 - [📊 CamoIT Dataset](#-camoit-dataset)
 - [📈 Results](#-results)
 - [🔧 Getting Started](#-getting-started)
-- [📁 Project Structure](#-project-structure)
 - [📝 Citation](#-citation)
-- [🙏 Acknowledgements](#-acknowledgements)
 
 ---
 
@@ -170,19 +168,29 @@ The C²GA mechanism is injected into **all 12 transformer layers**:
 
 **Data Sources**: CHAMELEON · CAMO · COD10K · NC4K
 
-### Multi-Granularity Annotations
-
-| Level | Type | Example |
-|:---:|:---|:---|
-| Level 1 | Category | *"A photo of crab."* |
-| Level 2 | Object | *"The crab has a shiny, brown shell."* |
-| Level 3 | Caption | *"A crab with a mottled brown body is perched among smooth pebbles..."* |
-
 ---
 
 ## 📈 Results
 
-### Main Results on CamoIT
+### Table 1: Cross-Dataset Results on CamoIT
+
+Models trained on MS-COCO and Flickr30K, evaluated on CamoIT:
+
+| Method | Pub. | MS-COCO → CamoIT | Flickr30K → CamoIT |
+|:---|:---:|:---:|:---:|
+| | | I2T R@1 \| T2I R@1 | I2T R@1 \| T2I R@1 |
+| CFM | '22 | 10.7 \| 10.7 | 5.4 \| 6.5 |
+| HREM | '23 | 11.3 \| 10.5 | 6.7 \| 5.7 |
+| CHAN | '23 | 10.9 \| 13.2 | 6.9 \| 7.8 |
+| DBL | '24 | 7.1 \| 8.7 | 4.5 \| 3.7 |
+| CUSA | '24 | 15.1 \| 13.5 | 12.6 \| 10.5 |
+| LAPS | '24 | 11.8 \| 10.6 | 5.9 \| 4.9 |
+| AVSE | '25 | N/A \| N/A | 5.7 \| 4.8 |
+| D2S-VSE | '25 | 13.3 \| 12.7 | 7.5 \| 6.5 |
+
+All methods achieve **R@1 < 15%**, revealing the unique challenges of CA-ITR.
+
+### Table 2: Main Results on CamoIT (Retrained)
 
 | Method | I2T R@1 | I2T R@5 | I2T R@10 | T2I R@1 | T2I R@5 | T2I R@10 |
 |:---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -200,19 +208,30 @@ The C²GA mechanism is injected into **all 12 transformer layers**:
 
 <img src="images/Figure4.png" width="100%" alt="Qualitative Results">
 
-### Impact of COD Models
-
-| COD Model | I2T R@1 | T2I R@1 | S_α ↑ | MAE ↓ |
-|:---|:---:|:---:|:---:|:---:|
-| White (no detection) | 41.6 | 41.3 | 0.443 | 0.120 |
-| SINet | 42.3 | 42.1 | 0.808 | 0.049 |
-| SINet-v2 | 43.3 | 43.1 | 0.843 | 0.037 |
-| ZoomNet | 44.0 | 42.9 | 0.851 | 0.033 |
-| **ZoomNeXt** | **45.8** ✨ | **44.6** ✨ | **0.906** | **0.021** |
-
 ---
 
 ## 🔧 Getting Started
+
+### Download
+
+| Resource | Link |
+|:---|:---|
+| 📦 **Pre-trained Weights** | [Google Drive](https://drive.google.com/) / [Baidu Netdisk](https://pan.baidu.com/) |
+| 📊 **CamoIT Dataset** | [Google Drive](https://drive.google.com/) / [Baidu Netdisk](https://pan.baidu.com/) |
+
+After downloading, organize files as follows:
+
+```
+pretrained/
+├── ViT-B-32.pt              # CLIP weights
+└── ZoomNeXt_retrain.pth     # COD expert weights
+
+data/
+├── images/                  # Original images
+├── mask_zoomnext/           # Pre-computed COD masks
+├── train.json
+└── test.json
+```
 
 ### Installation
 
@@ -225,16 +244,6 @@ conda activate cecnet
 
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install timm open-clip-torch opencv-python tqdm pandas
-```
-
-### Dataset Preparation
-
-```
-data/
-├── images/              # Original images
-├── mask_zoomnext/       # Pre-computed COD masks
-├── train.json
-└── test.json
 ```
 
 ### Training (Two-Stage)
@@ -264,35 +273,6 @@ python test.py --model_path './models/CECNet/best_model.pth' --Expert
 
 ---
 
-## 📁 Project Structure
-
-```
-CA-ITR/
-├── CECNet.py              # Main model
-├── train.py               # Training script
-├── test.py                # Evaluation script
-├── dataset.py             # Dataset class
-├── evaluation.py          # Metrics
-├── methods/
-│   ├── zoomnext/          # COD expert model
-│   └── backbone/          # PVT-V2, EfficientNet
-├── open_clip/             # Modified OpenCLIP
-└── images/                # README assets
-```
-
----
-
-## 💻 Hardware Requirements
-
-| Component | Minimum | Recommended |
-|:---|:---|:---|
-| GPU | 16GB VRAM | 24GB (RTX 3090/4090) |
-| RAM | 32GB | 64GB |
-
-Training time on RTX 4090: **Stage 1 ~2h** · **Stage 2 ~1h**
-
----
-
 ## 📝 Citation
 
 If you find this work helpful, please cite:
@@ -308,24 +288,9 @@ If you find this work helpful, please cite:
 
 ---
 
-## 🙏 Acknowledgements
-
-This work is supported by **NSFC** (No. 62176169) and **Sichuan Science and Technology Program** (2025ZNSFSC0469).
-
-Built upon:
-
-[![CLIP](https://img.shields.io/badge/CLIP-OpenAI-lightgrey?style=flat-square)](https://github.com/openai/CLIP)
-[![OpenCLIP](https://img.shields.io/badge/OpenCLIP-MLFoundations-lightgrey?style=flat-square)](https://github.com/mlfoundations/open_clip)
-[![ZoomNeXt](https://img.shields.io/badge/ZoomNeXt-COD-lightgrey?style=flat-square)](https://github.com/lartpang/ZoomNeXt)
-[![PVT-V2](https://img.shields.io/badge/PVT--V2-Backbone-lightgrey?style=flat-square)](https://github.com/whai362/PVT)
-
----
-
 <div align="center">
 
 ### 🌟 If you find this project helpful, please give it a star!
-
-[![Star History Chart](https://api.star-history.com/svg?repos=jiangyao-scu/CA-ITR&type=Date)](https://star-history.com/#jiangyao-scu/CA-ITR&Date)
 
 **Contact**: [fkrsuper@scu.edu.cn](mailto:fkrsuper@scu.edu.cn)
 
