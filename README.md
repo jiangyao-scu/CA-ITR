@@ -44,6 +44,7 @@
 <p align="center">
   <img src="images/Figure1.png" width="65%" alt="Motivation">
 </p>
+<p align="center"><i>Figure 1: Qualitative results of SOTA retrieval methods on CA-ITR. Camouflaged objects are marked with red bounding boxes.</i></p>
 
 ---
 
@@ -85,10 +86,12 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 <p align="center">
   <img src="images/Figure2.png" width="70%" alt="CamoIT Dataset">
 </p>
+<p align="center"><i>Figure 2: Data annotation process, an example, and statistical analyses of CamoIT.</i></p>
 
 <p align="center">
   <img src="images/Figure5.png" width="80%" alt="Comparison with COCO and Flickr30K">
 </p>
+<p align="center"><i>Figure 5: Comparison of CamoIT with MS-COCO and Flickr30K in terms of statistics and sample characteristics.</i></p>
 
 <table align="center">
 <tr>
@@ -190,6 +193,7 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 <p align="center">
   <img src="images/Figure3.png" width="80%" alt="CECNet Architecture">
 </p>
+<p align="center"><i>Figure 3: The overall pipeline of the proposed CECNet and C²GA mechanism.</i></p>
 
 <table align="center">
 <tr>
@@ -280,6 +284,7 @@ Injected into <b>all 12 transformer layers</b>
 <p align="center">
   <img src="images/Figure4.png" width="80%" alt="Qualitative Results">
 </p>
+<p align="center"><i>Figure 4: Qualitative results of CECNet (top, light purple) and CLIP (bottom, light orange) on sentence retrieval (left) and image retrieval (right).</i></p>
 
 ---
 
