@@ -266,7 +266,7 @@ CECNet employs a dual-branch architecture: the <strong>Global Context Branch</st
 
 ### 📦 Pre-trained Models
 
-CLIP ViT-B-32 • PVT-V2-B2 • ZoomNeXt
+CLIP ViT-B-32 • ZoomNeXt
 
 <a href="#"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
 <a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
