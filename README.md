@@ -32,7 +32,6 @@
 </p>
 
 <p align="center">
-  <a href="#motivation">Motivation</a> • 
   <a href="#-camoit-dataset">Dataset</a> • 
   <a href="#-benchmark">Benchmark</a> • 
   <a href="#%EF%B8%8F-method">Method</a> • 
@@ -53,31 +52,6 @@
 <p align="justify">
 Camouflaged scene understanding (CSU) has attracted significant attention due to its broad practical implications. However, in this field, robust <strong>image-text cross-modal alignment</strong> remains under-explored. We formulate a new task dubbed <strong>CA-ITR</strong> (Camouflage-aware Image-Text Retrieval) and construct <strong>CamoIT</strong> dataset (~10.5K samples, 237 categories). We propose <strong>CECNet</strong> with a novel <strong>C²GA</strong> mechanism, achieving <strong>~29% accuracy boost</strong>.
 </p>
-
----
-
-## 💡 Motivation
-
-<p align="center">
-Current SOTA retrieval models frequently <strong>mismatch</strong> textual descriptions with incorrect visual objects in camouflaged scenes.
-</p>
-
-<table align="center">
-<tr>
-<td width="33%" align="center">
-<h3>🎭 Object Perception</h3>
-<p align="center">Camouflaged objects are visually similar to backgrounds</p>
-</td>
-<td width="33%" align="center">
-<h3>🌿 Complex Content</h3>
-<p align="center">Images contain intricate backgrounds and multiple elements</p>
-</td>
-<td width="33%" align="center">
-<h3>🔍 Fine-grained Understanding</h3>
-<p align="center">Requires detailed comprehension of object attributes</p>
-</td>
-</tr>
-</table>
 
 ---
 
@@ -109,6 +83,29 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 ---
 
 ## 📈 Benchmark
+
+### 🔍 Key Findings
+
+<p align="center">
+Current SOTA retrieval models frequently <strong>mismatch</strong> textual descriptions with incorrect visual objects in camouflaged scenes.
+</p>
+
+<table align="center">
+<tr>
+<td width="33%" align="center">
+<h3>🎭 Object Perception</h3>
+<p align="center">Camouflaged objects are visually similar to backgrounds</p>
+</td>
+<td width="33%" align="center">
+<h3>🌿 Complex Content</h3>
+<p align="center">Images contain intricate backgrounds and multiple elements</p>
+</td>
+<td width="33%" align="center">
+<h3>🔍 Fine-grained Understanding</h3>
+<p align="center">Requires detailed comprehension of object attributes</p>
+</td>
+</tr>
+</table>
 
 <h3 align="center">Table 1: Cross-Dataset Evaluation on CamoIT</h3>
 
