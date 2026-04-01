@@ -32,6 +32,7 @@
 </p>
 
 <p align="center">
+  <a href="#-motivation">Motivation</a> • 
   <a href="#-camoit-dataset">Dataset</a> • 
   <a href="#-benchmark">Benchmark</a> • 
   <a href="#%EF%B8%8F-method">Method</a> • 
@@ -40,18 +41,24 @@
 
 <hr>
 
-<p align="center">
-  <img src="images/Figure1.png" width="65%" alt="Motivation">
-</p>
-<p align="center"><i>Figure 1: Qualitative results of SOTA retrieval methods on CA-ITR. Camouflaged objects are marked with red bounding boxes.</i></p>
-
----
-
 ## 📖 Abstract
 
 <p align="justify">
 Camouflaged scene understanding (CSU) has attracted significant attention due to its broad practical implications. However, in this field, robust <strong>image-text cross-modal alignment</strong> remains under-explored. We formulate a new task dubbed <strong>CA-ITR</strong> (Camouflage-aware Image-Text Retrieval) and construct <strong>CamoIT</strong> dataset (~10.5K samples, 237 categories). We propose <strong>CECNet</strong> with a novel <strong>C²GA</strong> mechanism, achieving <strong>~29% accuracy boost</strong>.
 </p>
+
+---
+
+## 💡 Motivation
+
+<p align="center">
+Current SOTA retrieval models frequently <strong>mismatch</strong> textual descriptions with incorrect visual objects in camouflaged scenes.
+</p>
+
+<p align="center">
+  <img src="images/Figure1.png" width="65%" alt="Motivation">
+</p>
+<p align="center"><i>Figure 1: Qualitative results of SOTA retrieval methods on CA-ITR. Camouflaged objects are marked with red bounding boxes.</i></p>
 
 ---
 
