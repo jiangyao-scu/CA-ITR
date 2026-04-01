@@ -301,21 +301,21 @@ Images • Annotations • COD Masks
 git clone https://github.com/jiangyao-scu/CA-ITR.git
 cd CA-ITR
 
-conda create -n cecnet python=3.8
+conda create -n cecnet python=3.9
 conda activate cecnet
 
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install timm open-clip-torch opencv-python tqdm pandas
+pip install timm opencv-python tqdm pandas
 ```
 
-### Training (Two-Stage)
+### Training
 
 ```bash
 # Stage 1: Train C²GA (freeze CLIP)
 python train.py --output_dir './models/CCGA/' --frozen_clip --ccga_lr 1e-4
 
 # Stage 2: Joint fine-tuning
-python train.py --output_dir './models/CECNet/' --ccga_lr 1e-5 --clip_lr 1e-6 \
+python train.py --output_dir './models/CECNet/' --ccga_lr 1e-5 --clip_lr 1e-5 \
     --resume_path './models/CCGA/CCGAs.pth'
 ```
 
