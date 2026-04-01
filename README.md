@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://img.icons8.com/fluency/96/camouflage.png" width="100">
-</p>
-
 <h1 align="center">CECNet: Camouflage-aware Image-Text Retrieval</h1>
 
 <h3 align="center">via Expert Collaboration</h3>
