@@ -84,29 +84,6 @@ Camouflaged scene understanding (CSU) has attracted significant attention due to
 
 ## 📈 Benchmark
 
-### 🔍 Key Findings
-
-<p align="center">
-Current SOTA retrieval models frequently <strong>mismatch</strong> textual descriptions with incorrect visual objects in camouflaged scenes.
-</p>
-
-<table align="center">
-<tr>
-<td width="33%" align="center">
-<h3>🎭 Object Perception</h3>
-<p align="center">Camouflaged objects are visually similar to backgrounds</p>
-</td>
-<td width="33%" align="center">
-<h3>🌿 Complex Content</h3>
-<p align="center">Images contain intricate backgrounds and multiple elements</p>
-</td>
-<td width="33%" align="center">
-<h3>🔍 Fine-grained Understanding</h3>
-<p align="center">Requires detailed comprehension of object attributes</p>
-</td>
-</tr>
-</table>
-
 <h3 align="center">Table 1: Cross-Dataset Evaluation on CamoIT</h3>
 
 <p align="center"><i>Models trained on MS-COCO and Flickr30K, evaluated on CamoIT</i></p>
@@ -183,6 +160,29 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
   <b>All methods achieve R@1 &lt; 15%</b>
 </p>
 
+### 🔍 Key Findings
+
+<p align="center">
+Current SOTA retrieval models frequently <strong>mismatch</strong> textual descriptions with incorrect visual objects in camouflaged scenes.
+</p>
+
+<table align="center">
+<tr>
+<td width="33%" align="center">
+<h3>🎭 Object Perception</h3>
+<p align="center">Camouflaged objects are visually similar to backgrounds</p>
+</td>
+<td width="33%" align="center">
+<h3>🌿 Complex Content</h3>
+<p align="center">Images contain intricate backgrounds and multiple elements</p>
+</td>
+<td width="33%" align="center">
+<h3>🔍 Fine-grained Understanding</h3>
+<p align="center">Requires detailed comprehension of object attributes</p>
+</td>
+</tr>
+</table>
+
 ---
 
 ## 🏗️ Method
@@ -192,39 +192,9 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 </p>
 <p align="center"><i>Figure 3: The overall pipeline of the proposed CECNet and C²GA mechanism.</i></p>
 
-<table align="center">
-<tr>
-<td width="50%" valign="top">
-
-<h3>🌐 Global Context Branch</h3>
-<p><b>CLIP ViT-B/32</b></p>
-<p>Capture holistic scene context, preserving global image representations.</p>
-
-</td>
-<td width="50%" valign="top">
-
-<h3>🎯 Camouflage Expert Branch</h3>
-<p><b>ZoomNeXt (PVT-V2-B5)</b></p>
-<p>Detect camouflaged objects and extract purified features.</p>
-
-</td>
-</tr>
-</table>
-
-<h3 align="center">⚡ C²GA: Confidence-Conditioned Graph Attention</h3>
-
-<p align="center">
-Injected into <b>all 12 transformer layers</b>
+<p align="justify">
+CECNet employs a dual-branch architecture: the <strong>Global Context Branch</strong> based on CLIP ViT-B/32 captures holistic scene context, while the <strong>Camouflage Expert Branch</strong> powered by ZoomNeXt (PVT-V2-B5) detects camouflaged objects and extracts purified features. The novel <strong>C²GA (Confidence-Conditioned Graph Attention)</strong> mechanism is injected into all 12 transformer layers, which builds separate foreground and background graphs based on COD mask confidence, aggregates features independently to prevent contamination, and fuses them adaptively for robust cross-modal alignment.
 </p>
-
-<table align="center">
-<tr>
-<td width="25%" align="center">1️⃣<br><b>Compute Confidence</b><br>Leverage COD masks per patch</td>
-<td width="25%" align="center">2️⃣<br><b>Build Graphs</b><br>Foreground 𝒢<sub>F</sub> & Background 𝒢<sub>B</sub></td>
-<td width="25%" align="center">3️⃣<br><b>Aggregate Features</b><br>Independently to prevent contamination</td>
-<td width="25%" align="center">4️⃣<br><b>Adaptive Fusion</b><br>ADF for stable integration</td>
-</tr>
-</table>
 
 ---
 
