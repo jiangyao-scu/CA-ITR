@@ -40,46 +40,21 @@
 ## 📖 Abstract
 
 <p align="justify">
-<strong>Can machines accurately retrieve camouflaged objects from natural language descriptions?</strong> Current image-text retrieval models excel on standard benchmarks but dramatically fail when objects blend into their surroundings—a critical blind spot with real-world implications for ecological monitoring, wildlife conservation, and camouflage detection. We introduce <strong>CA-ITR</strong>, a new task focusing on <strong>Camouflage-aware Image-Text Retrieval</strong>, along with <strong>CamoIT</strong>, the first large-scale dataset (~10.5K samples, 237 categories) specifically designed for this challenging scenario. Our proposed <strong>CECNet</strong> leverages a novel <strong>C²GA (Confidence-Conditioned Graph Attention)</strong> mechanism to bridge this gap, achieving a <strong>~29% accuracy improvement</strong> over state-of-the-art methods.
+Camouflaged scene understanding (CSU) has attracted significant attention due to its broad practical implications. However, in this field, robust <strong>image-text cross-modal alignment</strong> remains under-explored. We formulate a new task dubbed <strong>CA-ITR</strong> (Camouflage-aware Image-Text Retrieval) and construct <strong>CamoIT</strong> dataset (~10.5K samples, 237 categories). We propose <strong>CECNet</strong> with a novel <strong>C²GA</strong> mechanism, achieving <strong>~29% accuracy boost</strong>.
 </p>
-
-<table align="center" cellspacing="0" cellpadding="0">
-<tr>
-<td width="25%" align="center" style="padding: 12px 8px;">
-<img src="https://img.shields.io/badge/Task-CAITR-blue?style=for-the-badge" alt="Task"><br>
-<b>New Task</b>
-</td>
-<td width="25%" align="center" style="padding: 12px 8px;">
-<img src="https://img.shields.io/badge/Dataset-CamoIT-green?style=for-the-badge" alt="Dataset"><br>
-<b>10.5K Samples</b>
-</td>
-<td width="25%" align="center" style="padding: 12px 8px;">
-<img src="https://img.shields.io/badge/Method-CECNet-orange?style=for-the-badge" alt="Method"><br>
-<b>C²GA Mechanism</b>
-</td>
-<td width="25%" align="center" style="padding: 12px 8px;">
-<img src="https://img.shields.io/badge/Gain-+29%25-red?style=for-the-badge" alt="Gain"><br>
-<b>Accuracy Boost</b>
-</td>
-</tr>
-</table>
 
 ---
 
 ## 🎯 Motivation
 
 <p align="center">
-  <img src="images/Figure1.png" width="90%" alt="Motivation">
+Current SOTA retrieval models frequently <strong>mismatch</strong> textual descriptions with incorrect visual objects in camouflaged scenes.
 </p>
 
 <p align="center">
-<i><b>Figure 1:</b> State-of-the-art retrieval models consistently fail on camouflaged scenes. <br>
-The text describes a <b>camouflaged object</b> (red box), but models retrieve <b>wrong images</b> with visible, non-camouflaged subjects.</i>
+  <img src="images/Figure1.png" width="80%" alt="Motivation">
 </p>
-
-<p align="center">
-<b>This is the gap we bridge.</b>
-</p>
+<p align="center"><i>Figure 1: SOTA retrieval methods fail to correctly match texts with camouflaged objects (red boxes), highlighting the need for CA-ITR.</i></p>
 
 ---
 
