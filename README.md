@@ -45,25 +45,16 @@ Camouflaged scene understanding (CSU) has attracted significant attention due to
 
 ---
 
-## 🎯 Teaser
-
-<p align="center">
-  <img src="images/Figure4.png" width="100%" alt="CECNet vs CLIP Qualitative Comparison">
-</p>
-<p align="center"><i>CECNet (purple) significantly outperforms CLIP (orange) in retrieving accurate descriptions and images for camouflaged objects.</i></p>
-
----
-
-## 💡 Motivation
+## 🎯 Motivation
 
 <p align="center">
 Current SOTA retrieval models frequently <strong>mismatch</strong> textual descriptions with incorrect visual objects in camouflaged scenes.
 </p>
 
 <p align="center">
-  <img src="images/Figure1.png" width="65%" alt="Motivation">
+  <img src="images/Figure1.png" width="80%" alt="Motivation">
 </p>
-<p align="center"><i>Figure 1: Qualitative results of SOTA retrieval methods on CA-ITR. Camouflaged objects are marked with red bounding boxes.</i></p>
+<p align="center"><i>Figure 1: SOTA retrieval methods fail to correctly match texts with camouflaged objects (red boxes), highlighting the need for CA-ITR.</i></p>
 
 ---
 
