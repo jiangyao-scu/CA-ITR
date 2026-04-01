@@ -54,7 +54,7 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 <p align="center">
   <img src="images/Figure1.png" width="80%" alt="Motivation">
 </p>
-<p align="center"><i>Figure 1: SOTA retrieval methods fail to correctly match texts with camouflaged objects (red boxes), highlighting the need for CA-ITR.</i></p>
+<p align="center"><i>Figure 1: SOTA retrieval methods fail to correctly match texts with camouflaged objects (red boxes), highlighting the need for CA-ITR. Below the dotted line are samples from the general ITR datasets (i.e., MS-COCO and Flickr30K).</i></p>
 
 ---
 
