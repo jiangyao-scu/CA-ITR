@@ -65,12 +65,12 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 ## 📊 CamoIT Dataset
 
 <p align="center">
-  <img src="images/Figure2.png" width="70%" alt="CamoIT Dataset">
+  <img src="images/Figure2.png" width="100%" alt="CamoIT Dataset">
 </p>
 <p align="center"><i>Figure 2: Data annotation process, an example, and statistical analyses of CamoIT.</i></p>
 
 <p align="center">
-  <img src="images/Figure5.png" width="80%" alt="Comparison with COCO and Flickr30K">
+  <img src="images/Figure5.png" width="100%" alt="Comparison with COCO and Flickr30K">
 </p>
 <p align="center"><i>Figure 5: Comparison of CamoIT with MS-COCO and Flickr30K in terms of statistics and sample characteristics.</i></p>
 
@@ -195,7 +195,7 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 ## 🏗️ Method
 
 <p align="center">
-  <img src="images/Figure3.png" width="80%" alt="CECNet Architecture">
+  <img src="images/Figure3.png" width="100%" alt="CECNet Architecture">
 </p>
 <p align="center"><i>Figure 3: The overall pipeline of the proposed CECNet and C²GA mechanism.</i></p>
 
@@ -256,7 +256,7 @@ CECNet employs a dual-branch architecture: the <strong>Global Context Branch</st
 <h3 align="center">Qualitative Results</h3>
 
 <p align="center">
-  <img src="images/Figure4.png" width="80%" alt="Qualitative Results">
+  <img src="images/Figure4.png" width="100%" alt="Qualitative Results">
 </p>
 <p align="center"><i>Figure 4: Qualitative results of CECNet (top, light purple) and CLIP (bottom, light orange) on sentence retrieval (left) and image retrieval (right).</i></p>
 
@@ -347,14 +347,6 @@ python test.py --model_path './models/CECNet/best_model.pth' --Expert
 ```
 
 ---
-
-<p align="center">
-  <a href="https://github.com/jiangyao-scu/CA-ITR/stargazers">
-    <img src="https://img.shields.io/github/stars/jiangyao-scu/CA-ITR?style=social" alt="Star">
-  </a>
-  &nbsp;&nbsp;
-  <b>Contact:</b> <a href="mailto:fkrsuper@scu.edu.cn">fkrsuper@scu.edu.cn</a>
-</p>
 
 <p align="center">
   <sub>Supported by NSFC (No. 62176169) and Sichuan Science and Technology Program (2025ZNSFSC0469)</sub>
