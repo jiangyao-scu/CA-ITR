@@ -45,6 +45,15 @@ Camouflaged scene understanding (CSU) has attracted significant attention due to
 
 ---
 
+## 🎯 Teaser
+
+<p align="center">
+  <img src="images/Figure4.png" width="100%" alt="CECNet vs CLIP Qualitative Comparison">
+</p>
+<p align="center"><i>CECNet (purple) significantly outperforms CLIP (orange) in retrieving accurate descriptions and images for camouflaged objects.</i></p>
+
+---
+
 ## 💡 Motivation
 
 <p align="center">
