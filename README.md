@@ -1,4 +1,4 @@
-<h1 align="center">CECNet: Camouflage-aware Image-Text Retrieval</h1>
+<h1 align="center">Camouflage-aware Image-Text Retrieval</h1>
 
 <h3 align="center">via Expert Collaboration</h3>
 
@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/jiangyao-scu/CA-ITR/stargazers"><img src="https://img.shields.io/github/stars/jiangyao-scu/CA-ITR?style=social" alt="Stars"></a>
   <img src="https://img.shields.io/badge/Python-3.8+-blue?style=flat-square&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/PyTorch-2.0+-orange?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch">
+  <img src="https://img.shields.io/badge/PyTorch-2.2+-orange?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch">
 </p>
 
 <p align="center">
@@ -190,13 +190,15 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 
 ## 🏗️ Method
 
+<h3 align="center">Camouflage-aware Image-Text Retrieval via Expert Collaboration</h3>
+
 <p align="center">
   <img src="images/Figure3.png" width="100%" alt="CECNet Architecture">
 </p>
 <p align="center"><i>Figure 3: The overall pipeline of the proposed CECNet and C²GA mechanism.</i></p>
 
 <p align="justify">
-CECNet employs a dual-branch architecture: the <strong>Global Context Branch</strong> based on CLIP ViT-B/32 captures holistic scene context, while the <strong>Camouflage Expert Branch</strong> powered by ZoomNeXt (PVT-V2-B5) detects camouflaged objects and extracts purified features. The novel <strong>C²GA (Confidence-Conditioned Graph Attention)</strong> mechanism is injected into all 12 transformer layers, which builds separate foreground and background graphs based on COD mask confidence, aggregates features independently to prevent contamination, and fuses them adaptively for robust cross-modal alignment.
+CECNet employs a dual-branch architecture: the <strong>Global Context Branch</strong> captures holistic scene context, while the <strong>Camouflage Expert Branch</strong> detects camouflaged objects and extracts purified features. The novel <strong>C²GA (Confidence-Conditioned Graph Attention)</strong> mechanism is injected into all 12 transformer layers, which builds separate foreground and background graphs based on COD mask confidence, aggregates features independently to prevent contamination, and fuses them adaptively for robust cross-modal alignment.
 </p>
 
 ---
@@ -236,9 +238,15 @@ CECNet employs a dual-branch architecture: the <strong>Global Context Branch</st
 <tr><td>AVSE</td>
 <td align="center">28.1</td><td align="center">59.7</td><td align="center">72.2</td>
 <td align="center">26.1</td><td align="center">56.3</td><td align="center">69.7</td></tr>
-<tr bgcolor="#f5f5f5"><td><b>CLIP (fine-tuned)</b></td>
+<tr bgcolor="#f5f5f5"><td><b>CLIP</b></td>
 <td align="center">41.3</td><td align="center">69.2</td><td align="center">79.0</td>
 <td align="center">41.1</td><td align="center">67.7</td><td align="center">78.4</td></tr>
+<tr><td>D2S-VSE+CEC</td>
+<td align="center">39.0</td><td align="center">69.4</td><td align="center">81.0</td>
+<td align="center">37.0</td><td align="center">68.3</td><td align="center">79.7</td></tr>
+<tr><td>AVSE+CEC</td>
+<td align="center">29.9</td><td align="center">60.7</td><td align="center">73.6</td>
+<td align="center">28.5</td><td align="center">59.2</td><td align="center">71.0</td></tr>
 <tr bgcolor="#e8f0ff"><td><b>CECNet (Ours)</b></td>
 <td align="center"><b>45.8</b> <sup>+4.5</sup></td>
 <td align="center"><b>74.5</b> <sup>+5.3</sup></td>
