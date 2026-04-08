@@ -309,11 +309,11 @@ Images • Annotations • COD Masks
 git clone https://github.com/jiangyao-scu/CA-ITR.git
 cd CA-ITR
 
-conda create -n cecnet python=3.9
+conda create -n cecnet python=3.8
 conda activate cecnet
 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install timm opencv-python tqdm pandas
+pip install torch torchvision torchaudio
+pip install -r requirements.txt
 ```
 
 ### Training
@@ -331,10 +331,10 @@ python train.py --output_dir './models/CECNet/' --ccga_lr 1e-5 --clip_lr 1e-5 \
 
 ```bash
 # Using pre-computed masks
-python test.py --model_path './models/CECNet/best_model.pth'
+python test.py --model_path './Path/To/CECNet.pth'
 
 # Using online COD inference
-python test.py --model_path './models/CECNet/best_model.pth' --Expert
+python test.py --model_path './Path/To/CECNet.pth' --Expert
 ```
 
 ---
@@ -342,6 +342,41 @@ python test.py --model_path './models/CECNet/best_model.pth' --Expert
 ## 📝 Citation
 
 ```bibtex
+@article{skurowski2018,
+  title={Animal camouflage analysis: Chameleon database},
+  author={Skurowski, Przemys{\l}aw and Abdulameer, Hassan and B{\l}aszczyk, Jakub and Depta, Tomasz and Kornacki, Adam and Kozie{\l}, Przemys{\l}aw},
+  journal={Unpublished manuscript},
+  volume={2},
+  number={6},
+  pages={7},
+  year={2018}
+}
+
+@article{le2019,
+  author       = {Trung{-}Nghia Le and Tam V. Nguyen and Zhongliang Nie and Minh{-}Triet Tran and Akihiro Sugimoto},
+  title        = {Anabranch network for camouflaged object segmentation},
+  journal      = {Comput. Vis. Image Underst.},
+  volume       = {184},
+  pages        = {45--56},
+  year         = {2019}
+}
+
+@inproceedings{Fan2020,
+  author       = {Deng{-}Ping Fan and Ge{-}Peng Ji and Guolei Sun and Ming{-}Ming Cheng and Jianbing Shen and Ling Shao},
+  title        = {Camouflaged Object Detection},
+  booktitle    = CVPR,
+  pages        = {2774--2784},
+  year         = {2020}
+}
+
+@inproceedings{Lv2021,
+  author       = {Yunqiu Lv and Jing Zhang and Yuchao Dai and Aixuan Li and Bowen Liu and Nick Barnes and Deng{-}Ping Fan},
+  title        = {Simultaneously Localize, Segment and Rank the Camouflaged Objects},
+  booktitle    = CVPR,
+  pages        = {11591--11601},
+  year         = {2021}
+}
+
 @inproceedings{jiang2026cecnet,
   title={Camouflage-aware Image-Text Retrieval via Expert Collaboration},
   author={Jiang, Yao and Mao, Zhongkuan and Wu, Xuan and Fu, Keren and Zhao, Qijun},
@@ -349,9 +384,3 @@ python test.py --model_path './models/CECNet/best_model.pth' --Expert
   year={2026}
 }
 ```
-
----
-
-<p align="center">
-  <sub>Supported by NSFC (No. 62176169) and Sichuan Science and Technology Program (2025ZNSFSC0469)</sub>
-</p>
