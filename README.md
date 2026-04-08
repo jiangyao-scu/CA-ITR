@@ -277,7 +277,7 @@ CECNet employs a dual-branch architecture: the <strong>Global Context Branch</st
 CLIP ViT-B-32 • ZoomNeXt
 
 <a href="https://drive.google.com/file/d/1Fz3eeqNargYlBi5t_E6tccTACzuybUWq/view?usp=sharing"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
-<a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
+<a href="https://pan.baidu.com/s/1EgpEQ8vJDyKfAB1VCGNwzQ?pwd=5tu8"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
 </td>
 <td width="33%" align="center">
@@ -287,7 +287,7 @@ CLIP ViT-B-32 • ZoomNeXt
 CECNet (Stage 1 & Stage 2)
 
 <a href="https://drive.google.com/file/d/1x0FJsxLnsCKCwrvM_NN7JnytTZZ67xE6/view?usp=sharing"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
-<a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
+<a href="https://pan.baidu.com/s/1C42DiM1kSqj-jAJpFHiTkg?pwd=uv9p"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
 </td>
 <td width="33%" align="center">
@@ -296,8 +296,8 @@ CECNet (Stage 1 & Stage 2)
 
 Images • Annotations • COD Masks
 
-<a href="https://drive.google.com/drive/folders/1QxhhGFeDuPQvu6GXJcLd-pUx8iU9CWp_?usp=drive_link"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
-<a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
+<a href="https://drive.google.com/drive/folders/1QxhhGFeDuPQvu6GXJcLd-pUx8iU9CWp_?usp=sharing"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
+<a href="https://pan.baidu.com/s/119pGgTt9tqt4AU_rCzSDDw?pwd=xqrx"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
 </td>
 </tr>
