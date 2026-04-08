@@ -276,7 +276,7 @@ CECNet employs a dual-branch architecture: the <strong>Global Context Branch</st
 
 CLIP ViT-B-32 • ZoomNeXt
 
-<a href="#"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
+<a href="https://drive.google.com/file/d/1Fz3eeqNargYlBi5t_E6tccTACzuybUWq/view?usp=sharing"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
 <a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
 </td>
@@ -286,7 +286,7 @@ CLIP ViT-B-32 • ZoomNeXt
 
 CECNet (Stage 1 & Stage 2)
 
-<a href="#"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
+<a href="https://drive.google.com/file/d/1x0FJsxLnsCKCwrvM_NN7JnytTZZ67xE6/view?usp=sharing"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
 <a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
 </td>
@@ -296,7 +296,7 @@ CECNet (Stage 1 & Stage 2)
 
 Images • Annotations • COD Masks
 
-<a href="#"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
+<a href="https://drive.google.com/drive/folders/1QxhhGFeDuPQvu6GXJcLd-pUx8iU9CWp_?usp=drive_link"><img src="https://img.shields.io/badge/Google%20Drive-Download-blue?logo=google-drive" alt="Google Drive"></a>
 <a href="#"><img src="https://img.shields.io/badge/Baidu-Download-blue?logo=baidu" alt="Baidu"></a>
 
 </td>
