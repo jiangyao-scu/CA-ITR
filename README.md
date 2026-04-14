@@ -73,7 +73,7 @@ Current SOTA retrieval models frequently <strong>mismatch</strong> textual descr
 <table align="center">
 <tr>
 <td width="25%" align="center"><h2>10,464</h2><b>Total Samples</b></td>
-<td width="25%" align="center"><h2>237</h2><b>Categories</b></td>
+<td width="25%" align="center"><h2>~237</h2><b>Categories</b></td>
 <td width="25%" align="center"><h2>~25</h2><b>Avg. Words</b></td>
 <td width="25%" align="center"><h2>7:3</h2><b>Train/Test Split</b></td>
 </tr>
